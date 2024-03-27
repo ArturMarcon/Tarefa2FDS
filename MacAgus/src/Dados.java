@@ -4,7 +4,7 @@ public class Dados {
     
     private static Dados instance;
 
-    private List<Product> produtos;
+    private List<Produto> produtos;
     private List<Pedido> pedidos;
 
     Dados() {
@@ -18,15 +18,28 @@ public class Dados {
         return instance;
     }
 
-    public Product[] getProdutos() {
-        return (Product[])produtos.toArray();
+    public Produto[] getProdutos() {
+        return (Produto[])produtos.toArray();
     }
 
-    public List<Pedido> getPedidos() {
+    public Pedido[] getPedidos() {
         return (Pedido[])pedidos.toArray();
     }
 
-    public Product getProdutoFromCod(String cod) {
-        return produtos.stream().anyMatch(p -> p.getCodigo().equals(cod));
+    public Produto getProdutoFromCod(String cod) {
+        Optional<Produto> produto = produtos.stream()
+                                            .filter(p -> p.getCodigo().equals(cod))
+                                            .findAny();
+        if (!produto.isPresent())
+            return null;
+        return produto.get();
+    }
+
+    public void addProduto(Produto produto) {
+        produtos.add(produto);
+    }
+
+    public void addPedido(Pedido pedido) {
+        pedidos.add(pedido);
     }
 }

@@ -1,5 +1,4 @@
-
-public class Lanche implements Product {
+public class Lanche implements Produto {
     private String nome;
     private String codigo;
     private double preco;
