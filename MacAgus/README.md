@@ -1,18 +1,7 @@
-## Getting Started
+## Relatorio
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+As divisoes do grupo para o desenvolvimento.
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- `Artur Marcon`: Gerente do Projeto e projetista das classes modelo que são os objetos elemento de lista, como Produto, Lanche, Combo, Pedido, alem da logico de criacao para essas classes.
+- `Luca Manfroi`: Projetista inicial da organizacao de classes e dos primeiros codigos.
+- `Robson Uszacki`: Estruturou as classes de organizacao de dados, como Dados e Cardapio, alem de incrementar o desenvolvimento nas classes App e SistemaDeVendasFacade e refatorar todo o codigo no final.
