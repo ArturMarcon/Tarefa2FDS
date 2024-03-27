@@ -1,15 +1,32 @@
 
 public class Lanche implements Product {
+    private String nome;
+    private String codigo;
+    private double preco;
 
-    @Override
-    public void exibir() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'exibir'");
+    private static int codigoAtual = 1;
+    
+    public Lanche(String nome, float preco) {
+        this.nome = nome;
+        this.preco = preco;
+        this.codigo = Integer.toString(codigoAtual++);
+
     }
 
     @Override
+    public String toString() {
+        return "Nome: " + nome + ", Código: " + codigo + ", Preço: " + preco;
+    }
+
     public double getPreco() {
-        return 29.99;
+        return preco;
+    }
+    
+    public String getCodigo() {
+        return codigo;
     }
 
+    public String getNome() {
+        return nome;
+    }
 }

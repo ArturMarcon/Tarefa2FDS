@@ -1,6 +1,6 @@
 
 public interface Product {
-    public void exibir();
+    public String toString();
 
     public double getPreco();
 }

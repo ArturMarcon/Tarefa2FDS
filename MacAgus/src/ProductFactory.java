@@ -1,15 +1,8 @@
 import java.util.ArrayList;
 
 public class ProductFactory {
-    public Product criarProdutoSimples(String tipo) {
-        if (tipo.equals("lanche")) {
-            return new Lanche();
-        } else if (tipo.equals("bebida")) {
-            return new Bebida();
-        } else if (tipo.equals("acompanhamento")) {
-            return new Acompanhamento();
-        }
-        return null;
+    public Product criarProdutoSimples(String nome, float preco) {
+        return new Lanche(nome, preco);
     }
 
     public Combo criarCombo(String nome, ArrayList<Product> itens) {
